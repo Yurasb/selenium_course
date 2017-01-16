@@ -72,19 +72,19 @@ def test_matching(wd):
         'div#box-campaigns div.name'
     )
     main_name = main_product_name.get_attribute(
-        'innerText'
+        'textContent'
     )
     main_regular_price = wd.find_element_by_css_selector(
         'div#box-campaigns s.regular-price'
     )
     main_reg_price = main_regular_price.get_attribute(
-        'innerText'
+        'textContent'
     )
     main_campaign_price = wd.find_element_by_css_selector(
         'div#box-campaigns strong.campaign-price'
     )
     main_camp_price = main_campaign_price.get_attribute(
-        'innerText'
+        'textContent'
     )
     product = wd.find_element_by_css_selector(
         'div#box-campaigns a.link'
@@ -94,17 +94,17 @@ def test_matching(wd):
         'h1'
     )
     details_name = details_product_name.get_attribute(
-        'innerText'
+        'textContent'
     )
     details_reg_price = wd.find_element_by_css_selector(
         's.regular-price'
     )
-    reg_price = details_reg_price.get_attribute('innerText')
+    reg_price = details_reg_price.get_attribute('textContent')
     details_camp_price = wd.find_element_by_css_selector(
         'strong.campaign-price'
     )
     camp_price = details_camp_price.get_attribute(
-        'innerText'
+        'textContent'
     )
     assert main_name == details_name
     assert main_reg_price == reg_price
