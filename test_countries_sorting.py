@@ -81,7 +81,9 @@ def test_geo_zones_sorting(driver):
         )
         for zone in zones:
             selected = Select(zone).first_selected_option
-            unsorted_list.append(selected.get_attribute('textContent'))
+            unsorted_list.append(
+                selected.get_attribute('textContent')
+            )
         sorted_list = sorted(unsorted_list)
         assert sorted_list == unsorted_list
         driver.get(
