@@ -16,8 +16,12 @@ def driver(request):
 @pytest.fixture(scope='session', autouse=True)
 def page(driver):
     driver.get('http://localhost/litecart/admin/')
-    driver.find_element_by_name('username').send_keys('admin')
-    driver.find_element_by_name('password').send_keys('admin')
+    driver.find_element_by_name('username').send_keys(
+        'admin'
+    )
+    driver.find_element_by_name('password').send_keys(
+        'admin'
+    )
     driver.find_element_by_name('login').click()
 
 
@@ -63,7 +67,7 @@ def test_adding_product(driver):
     driver.find_element_by_css_selector(
         'input[type=\'file\']'
     ).send_keys(
-        '/home/yury/PycharmProjects/selenium_course/adding_product/new_product.png'
+        '/home/yury/PycharmProjects/selenium_course/task 12 - add new product script/new_product.png'
     )
 
     driver.find_element_by_name(

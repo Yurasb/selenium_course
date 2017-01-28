@@ -24,7 +24,7 @@ for link in ext_links:
     link.click()
     current_windows = driver.window_handles
     wait.until(EC.number_of_windows_to_be(2))
-    driver.switch_to_window(current_windows[1])
+    driver.switch_to.window(current_windows[1])
     driver.close()
-    driver.switch_to_window(main_window)
+    driver.switch_to.window(main_window)
 driver.quit()

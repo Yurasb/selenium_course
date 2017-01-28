@@ -12,7 +12,7 @@ driver.find_element_by_name('password').send_keys(
 )
 driver.find_element_by_name('login').click()
 links = driver.find_elements_by_css_selector(
-        'li#app->a'
+    'li#app->a'
 )
 for i in xrange(len(links)):
     links = driver.find_elements_by_css_selector(

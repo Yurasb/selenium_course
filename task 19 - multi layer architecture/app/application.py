@@ -7,6 +7,7 @@ from pages.checkout_page import CheckoutPage
 
 
 class Application:
+
     def __init__(self):
         self.driver = webdriver.Chrome()
         self.main_page = MainPage(self.driver)
